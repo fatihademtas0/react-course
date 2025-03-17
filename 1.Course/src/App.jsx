@@ -27,7 +27,6 @@ function App() {
           <div key={index} style={{
             backgroundColor: 'green',
             border: '1px solid black'
-
           }}>
             {index+1} : {name}
           </div>   
