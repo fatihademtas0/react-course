@@ -1,0 +1,46 @@
+.game-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.game{
+  width: 270px;
+  height: 490px;
+  border: 1px solid lightgray;
+  padding: 40px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.name {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+.game-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.game-price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: red;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.game-link {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  border-radius: 2px;
+  display: flex;
+  display: block;
+  text-align: right;
+  padding-right: 10px;  
+}
