@@ -1,0 +1,43 @@
+.currency-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    border: 1px solid black;
+    height: 250px;
+    width: 450px;
+}
+
+.amount {
+    width: 80px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.result {
+    width: 80px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.from-currency-option {
+    width: 50px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.to-currency-option {
+    width: 50px;
+    height: 25px;
+}
+
+.exchange-button {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(186, 62, 62);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
