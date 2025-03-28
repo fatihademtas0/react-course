@@ -4,9 +4,12 @@ import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { IoMoon } from "react-icons/io5";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
     const [theme, setTheme] = useState(false);
+
+    const navigate = useNavigate();
 
     const changeTheme = () => {
         const root = document.getElementById("root");
@@ -30,8 +33,15 @@ function Header() {
             }}
         >
             <div className='flex-row'>
-                <img className='logo' src='../src/images/logo.png' alt='' />
-                <p className='logo-text'>INVERIZO</p>
+                <img
+                    onClick={() => navigate("/")}
+                    className='logo'
+                    src='../src/images/logo.png'
+                    alt=''
+                />
+                <p onClick={() => navigate("/")} className='logo-text'>
+                    INVERIZO
+                </p>
             </div>
 
             <div className='flex-row'>
