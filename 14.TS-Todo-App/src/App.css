@@ -1,4 +1,59 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-create {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+}
+
+.create-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(49, 164, 164);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.create-button:hover {
+    background-color: rgb(35, 114, 114);
+    transition: 0.4s;
+}
+
+.todo-icons {
+    font-size: 20px;
+    margin-right: 7px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(41, 211, 205);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
 }
