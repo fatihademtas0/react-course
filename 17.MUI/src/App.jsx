@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import MUIButton from "./components/MUIButton";
+import MUITextField from "./components/MUITextField";
 
 function App() {
     return (
         <div>
-            <div></div>
+            <MUIButton />
+            <MUITextField />
         </div>
     );
 }
