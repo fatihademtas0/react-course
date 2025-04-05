@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(39, 34, 34);
+    color: white;
+}
+
+form {
+    width: 500px;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: rgb(39, 34, 34);
+    border-bottom: 1px solid lightgray;
+    outline: none;
+    color: white;
+}
+
+.input-div {
+    margin: 30px 0px;
+}
+
+.input-error {
+    font-size: 15px;
+    color: red;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.submit-button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(207, 49, 49);
+    cursor: pointer;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: rgb(163, 39, 39);
+}
+
+.term {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.checkbox {
+    width: 20px;
+}
