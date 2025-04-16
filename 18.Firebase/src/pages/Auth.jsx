@@ -1,11 +1,40 @@
 import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+} from "firebase/auth";
 import { toast } from "react-toastify";
 import { auth } from "../Firebase";
+import { useNavigate } from "react-router-dom";
+
+const provider = new GoogleAuthProvider();
 
 function Auth() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
+
+    const loginWithGoogle = async () => {
+        try {
+            const response = await signInWithPopup(auth, provider);
+
+            const credential =
+                GoogleAuthProvider.credentialFromResult(response);
+
+            const token = credential.accessToken;
+
+            const user = response.user;
+
+            if (user) {
+                navigate("/");
+            }
+        } catch (error) {
+            toast.error(error.message);
+        }
+    };
 
     const register = async () => {
         try {
@@ -27,6 +56,27 @@ function Auth() {
         }
     };
 
+    const login = async () => {
+        try {
+            const response = await signInWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
+
+            const user = response.user;
+
+            if (user) {
+                navigate("/");
+                toast.success("You have logged in successfully.");
+                setEmail("");
+                setPassword("");
+            }
+        } catch (error) {
+            toast.error("Error logging in: " + error.message);
+        }
+    };
+
     return (
         <div className='auth'>
             <h3 className='title'>Login / Sign Up</h3>
@@ -45,9 +95,9 @@ function Auth() {
             </div>
 
             <div className='button-div'>
-                <button>Login with Google</button>
+                <button onClick={loginWithGoogle}>Login with Google</button>
 
-                <button>Login</button>
+                <button onClick={login}>Login</button>
 
                 <button onClick={register}>Sign Up</button>
             </div>
