@@ -1,0 +1,48 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 16px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.color-box {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Mat renkler */
+.red {
+    background-color: #e74c3c;
+}
+
+.blue {
+    background-color: #3498db;
+}
+
+.green {
+    background-color: #2ecc71;
+}
+
+.yellow {
+    background-color: #f1c40f;
+}
+
+.purple {
+    background-color: #9b59b6;
+}
+
+.pink {
+    background-color: #e91e63;
+}
+
+.teal {
+    background-color: #1abc9c;
+}
+
+.orange {
+    background-color: #e67e22;
+}
